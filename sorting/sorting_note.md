@@ -87,3 +87,23 @@ It is a prototype of Divide and Conquer algorithm
             for lo in range(0, N-sz, sz+sz):
                 merge(array, lo, lo+sz-1, min(lo+sz+sz-1, N-1))
 
+## Quick Sort
+Time complexity average: O(nlogn)
+Space: in-space
+Divide-and-conquer method  
+Do much less data movement than merge sort
+
+    # out-space quick sort
+    import random
+    array = [4, 5, 2, 4, 9, 1, 3, 8]
+        
+    def quick_sort(array):
+        random.shuffle(array)
+        pivot = array[0]
+        less = [i for i in array[1:] if i <= pivot]
+        more = [i for i in array[1:] if i > pivot]
+        return quick_sort(less) + [pivot] + quick_sort(more)
+
+    # This method is problematic becasue it use lots of addition space, we could do the quick sort in space.
+
+## Priority Queues
