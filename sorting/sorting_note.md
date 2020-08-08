@@ -107,3 +107,4 @@ Do much less data movement than merge sort
     # This method is problematic becasue it use lots of addition space, we could do the quick sort in space.
 
 ## Priority Queues
+support two operations: remove the maximum and insert
