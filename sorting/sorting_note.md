@@ -106,5 +106,58 @@ Do much less data movement than merge sort
 
     # This method is problematic becasue it use lots of addition space, we could do the quick sort in space.
 
+When there are lots of duplicative keys in the array, consider using the 3-way quick sort.
+
+    def 3_quick_sort(array, lo, hi):
+        if hi <= lo:
+            return 
+        lt = lo
+        i = lo+1
+        gt = hi
+        v = a[lo]
+        while i <= gt:
+            cmp = array[i] - v
+            if cmp < 0:
+                exch(i, lt)
+                i += 1
+                lt += 1
+            elif cpm > 0:
+                exch(i, gt)
+                gt -= 1
+            else:
+                i += 1
+        3_quick_sort(array, lo, lt-1)
+        3_quick_sort9array, gt+1, hi)
+
 ## Priority Queues
-support two operations: remove the maximum and insert
+1. Support two operations: remove the maximum and insert  
+2. Representations:  
+
+Data Structure | Insert | Remove Maximum
+--- | --- | ---
+array(unordered) | 1 | N
+array(ordered) | N | 1
+linked-list | 1 | N
+heap | logN | logN
+
+3. Binary Heap(be viewed as complete binary tree)
+   1. Priority tree is maintained in a heap-ordered complete binary tree in the array pq[] with pq[0] unused, hence the N keys are pq[1] through pq[N]
+   2. Heap-ordered: binary tree is heap-ordered if the key in each parent node is larger than or equal to it's two children
+   3. We can also build multiway heaps, if take three, then the children of K will be 3k-1, 3k and 3k+1, and k's father will be (k+1)/3. D-way heaps will reduce the height of tree from lgN to log_mN, but the cost of finding the largest chidren will be higher, this the tradeoff.
+
+### Heap sort
+Construct a heap from a given array first and do the sort
+
+    def heap_sort(array):
+        '''Construct a heap and do the sort'''
+        for k in range(len_array/2, 0, -1):
+            sink(array, k, len_array)
+        while len_array > 1
+            exch(array, 1, len_array)
+            len_array -= 1
+            sink(array, 1, len_array)
+
+The second sort phrace is more like a selection sort, but because heap structure can find the biggest one faster than selection sort, hence the speed is fast.  
+it is the only method that the the use of time and space is optimal.  
+It is popular when space is tight(embedded system)  
+Rarely used in typical applications on modern systems because array entries rarely compareed with nearby array entries, so the number of cache misses is far higher than for quick sort(even shellsort.)
