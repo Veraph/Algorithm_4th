@@ -161,3 +161,26 @@ The second sort phrace is more like a selection sort, but because heap structure
 it is the only method that the the use of time and space is optimal.  
 It is popular when space is tight(embedded system)  
 Rarely used in typical applications on modern systems because array entries rarely compareed with nearby array entries, so the number of cache misses is far higher than for quick sort(even shellsort.)
+
+
+## Applications
+### Sorting various types of data
+Define a compareTo() function(return true or false follow our well) makes it possible
+
+### Stability
+Sorting is stable if it preservers the relative order of equal keys in array (data with same key, but they come in different order or time)  
+
+Stable Sort | Unstable Sort
+--- | --- 
+InsertionSort, MergeSort | SelectionSort, ShellSort, QuickSort, HeapSort
+
+### Conclusion
+Algorithm | Stable? | In place?(do not need auxiliary data structure) | running time | extra space
+---|---|---|---
+Selection Sort | no | yes | N^2 | 1
+Insertion Sort | yes | yes | N~N^2 | 1
+Shell Sort | no | yes | NlogN | 1
+Quick Sort(Genearl Fastest) | no | yes | NlogN | lgN(because of recursion)
+3-way Quick Sort | no | N~NlogN | N^2 | lgN
+Merge Sort | yes | no | NlogN | N
+Heap Sort | no | yes | NlogN | 1
