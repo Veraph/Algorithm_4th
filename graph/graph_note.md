@@ -5,5 +5,25 @@
 
 # Directed-Graph notes
 
-# Minimum Spanning Trees
+# Minimum Spanning Tree
+Given an undirected edge-weight graph, find an MST
+## Assumptions needed
+1. graph is connected (if graph is not connected, we can compute the minimum spanning forest)
+2. the edge weights are not necessarily distances
+3. edge weights may be zero or negative
+4. edge weights are all different(with arbitrary but distinct)  
+### Cut property
+The shortest crossing edge for every cut must be in the MST(Greedy MST algorithm)
 
+## Prim's Algorithm
+
+## Kruskal's algorithm(space E, time ElogE)
+1. continues add the minimum edge(consider a priority queue to store) which will not create a cycle in the present tree
+2. generally slower than prim algorithm  
+
+Attention! Prim's amd Kruskal's algorithms do not work for directed graphs.
+
+# Shortest Paths
+Find the lowest-cost way to get from one vertex to another.
+## Shortest Path Tree
+A subgraph contain source s and all vertices reachable from s
