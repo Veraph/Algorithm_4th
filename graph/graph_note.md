@@ -26,4 +26,11 @@ Attention! Prim's amd Kruskal's algorithms do not work for directed graphs.
 # Shortest Paths
 Find the lowest-cost way to get from one vertex to another.
 ## Shortest Path Tree
-A subgraph contain source s and all vertices reachable from s
+A subgraph contain source s and all vertices reachable from s.
+### Edge Relaxation
+relax an edge v -> w means: test whether the best known way from s to w is to go from s to v and then from v to w
+### Vertex Relaxation
+### oprimality condition
+### Dijkstra's algorithm
+1. solve the single sourde shortest-paths problem in edge-weighted digraphs with nonnegative weights.
+2. adds next the non-tree vertex that is closest to the source
