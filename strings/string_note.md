@@ -27,3 +27,7 @@ have three links instead of R
 number of links in a TST is between 3N and 3Nwe, hence much more space efficient
 ### Which String symbol-table implementation should I use?
 
+## Sub string search
+### Brute-force
+# KMP(with DFA)
+works well with small R(radix)
