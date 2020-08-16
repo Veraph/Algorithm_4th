@@ -29,5 +29,28 @@ number of links in a TST is between 3N and 3Nwe, hence much more space efficient
 
 ## Sub string search
 ### Brute-force
-# KMP(with DFA)
+### KMP(with DFA)
 works well with small R(radix)
+
+### BM
+
+### RK
+basic idea: use modular hashing  
+can use horner's method to compute
+
+## Regular Expressions
+Pattern maching algorithm
+### NFAs (Nondeterministic finite state automata)
+RE: Consise way to describe a set of strings
+DFA: Machine to organize whether a givem string is in a given set
+### connections between complier and DFA/NFA, translate the programe into machine code
+
+## Data compression
+Data could be compresed to a program!
+### Run-length coding
+### huffman compression
+use prefix-free code  
+dynamic model
+### LZW
+adaptive model  
+use trie
